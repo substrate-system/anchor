@@ -1,11 +1,24 @@
 import { type FunctionComponent, render } from 'preact'
+import { useEffect } from 'preact/hooks'
 import { html } from 'htm/preact'
-import { example } from '../src/index.js'
+import { anchor } from '../src/index.js'
 
-example()
+// create anchors on the HTML elements
+const a = anchor({ visible: 'touch' })
 
 const Example:FunctionComponent<unknown> = function () {
-    return html`<div>hello</div>`
+    useEffect(() => {
+        // wait until we have rendered
+        a.add()
+    }, [])
+
+    return html`
+        <div>hello</div>
+        <h2>Another h2 tag</h2>
+    `
 }
+
+// @ts-expect-error dev
+window.anchor = a
 
 render(html`<${Example} />`, document.getElementById('root')!)
