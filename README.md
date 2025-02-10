@@ -19,12 +19,15 @@ This has been adapted from [bryanbraun/anchorjs](https://github.com/bryanbraun/a
 <!-- toc -->
 
 - [install](#install)
+- [Example](#example)
 - [Modules](#modules)
   * [ESM](#esm)
   * [Common JS](#common-js)
   * [pre-built JS](#pre-built-js)
-- [CSS](#css)
-  * [Import CSS](#import-css)
+- [API](#api)
+  * [options](#options)
+  * [`Anchor`](#anchor)
+  * [`anchor`](#anchor)
 
 <!-- tocstop -->
 
