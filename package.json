@@ -48,24 +48,24 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@substrate-system/debug": "^0.7.12",
-    "@substrate-system/tapzero": "^0.10.5",
-    "@preact/preset-vite": "^2.9.0",
-    "@typescript-eslint/eslint-plugin": "^8.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
-    "auto-changelog": "^2.4.0",
-    "esbuild": "^0.24.0",
+    "@substrate-system/debug": "^0.7.18",
+    "@substrate-system/tapzero": "^0.10.13",
+    "@preact/preset-vite": "^2.10.1",
+    "@typescript-eslint/eslint-plugin": "^8.23.0",
+    "@typescript-eslint/parser": "^8.23.0",
+    "auto-changelog": "^2.5.0",
+    "esbuild": "^0.25.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "htm": "^3.1.1",
     "markdown-toc": "^1.2.0",
-    "postcss-nesting": "^13.0.0",
-    "preact": "^10.22.1",
+    "postcss-nesting": "^13.0.1",
+    "preact": "^10.25.4",
     "tap-spec": "^5.0.0",
     "tape-run": "^11.0.0",
-    "typedoc": "^0.27.0",
-    "typescript": "^5.4.5",
-    "vite": "^6.0.0"
+    "typedoc": "^0.27.7",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
   },
   "author": "nichoth <nichoth@nichoth.com> (https://nichoth.com)",
   "repository": {
@@ -84,5 +84,5 @@
     "url": "https://github.com/substrate-system/anchor/issues"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "homepage": "https://github.com/substrate-system/anchor#readme"
+  "homepage": "https://github.com/substrate-system/anchor"
 }
