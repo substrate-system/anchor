@@ -8,13 +8,26 @@
 [![dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg?style=flat-square)](package.json)
 [![license](https://img.shields.io/badge/license-Polyform_Strict-f52f2f?style=flat-square)](LICENSE)
 
-
 Add anchor links to the headings in a document.
 
 [See a live demo](https://substrate-system.github.io/anchor/)
 
+This has been adapted from [bryanbraun/anchorjs](https://github.com/bryanbraun/anchorjs). Thanks [@bryanbraun](https://github.com/bryanbraun) for working in open source.
+
 <details><summary><h2>Contents</h2></summary>
+
 <!-- toc -->
+
+- [install](#install)
+- [Modules](#modules)
+  * [ESM](#esm)
+  * [Common JS](#common-js)
+  * [pre-built JS](#pre-built-js)
+- [CSS](#css)
+  * [Import CSS](#import-css)
+
+<!-- tocstop -->
+
 </details>
 
 ## install
@@ -23,13 +36,32 @@ Add anchor links to the headings in a document.
 npm i -S @substrate-system/anchor
 ```
 
-## Format
+## Example
+
+```js
+// import a function
+import { anchor } from '@substrate-system/anchor'
+
+// import the class
+import { Anchor } from '@substrate-system/anchor'
+
+// Use defaults for everything.
+// This will target any h2, h3, h4, or h5 tags
+anchor()
+
+// Or use the class.
+// Must call a.add after creating an instance
+// these are the default options
+const a = new Anchor()
+```
+
+## Modules
 
 This exposes ESM and common JS via [package.json `exports` field](https://nodejs.org/api/packages.html#exports).
 
 ### ESM
 ```js
-import Anchor from '@substrate-system/anchor'
+import { Anchor } from '@substrate-system/anchor'
 ```
 
 ### Common JS
@@ -51,15 +83,39 @@ cp ./node_modules/@substrate-system/anchor/dist/index.min.js ./public/anchor.min
 <script type="module" src="./anchor.min.js"></script>
 ```
 
-## CSS
+## API
 
-### Import CSS
+### options
 
-```js
-import '@substrate-system/anchor/css'
+```ts
+type AnchorOpts = {
+    // Characters like  '#', '¶', '❡', or '§'.
+    icon:string;
+    visible:'hover'|'always'|'touch';
+    placement:'right'|'left';
+    ariaLabel:string;  // any text, default "Anchor"
+    class:string;  // css class name
+    base:string;  // any base URI
+    truncate:number;  // Max length. Default 64
+    titleText:string;  // any text
+}
 ```
 
-Or minified:
+### `Anchor`
+
 ```js
-import '@substrate-system/anchor/css/min'
+class Anchor {
+    constructor (opts:Partial<AnchorOpts> = {
+        icon: '\uE9CB',
+        visible: 'always'
+    })
+}
+```
+
+### `anchor`
+Lower case `anchor` is a function that will create a new `Anchor` and call
+`.add()`.
+
+```ts
+function anchor (opts:Partial<AnchorOpts> = {}):Anchor
 ```
