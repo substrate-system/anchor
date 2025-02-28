@@ -56,7 +56,6 @@ anchor()
 
 // Or use the class.
 // Must call a.add after creating an instance
-// these are the default options
 const a = new Anchor()
 ```
 
