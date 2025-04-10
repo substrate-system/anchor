@@ -121,6 +121,18 @@ class Anchor {
 Lower case `anchor` is a function that will create a new `Anchor` and call
 `.add()`.
 
+>
+> [!NOTE]  
+> Call this with `{ visible: 'touch' }` to create anchor links that are
+> always visible on touch devices.
+>
+
 ```ts
 function anchor (opts:Partial<AnchorOpts> = {}):Anchor
+```
+
+```js
+import { anchor } from '@substrate-system/anchor'
+
+anchor({ visible: 'touch' })
 ```
