@@ -27,8 +27,8 @@ This has been adapted from [bryanbraun/anchorjs](https://github.com/bryanbraun/a
   * [pre-built JS](#pre-built-js)
 - [API](#api)
   * [options](#options)
-  * [`Anchor`](#anchor)
-  * [`anchor`](#anchor)
+  * [Upper case `Anchor`](#upper-case-anchor)
+  * [Lower case `anchor`](#lower-case-anchor)
 
 <!-- tocstop -->
 
