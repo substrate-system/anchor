@@ -106,7 +106,7 @@ type AnchorOpts = {
 }
 ```
 
-### `Anchor`
+### Upper case `Anchor`
 
 ```js
 class Anchor {
@@ -117,7 +117,7 @@ class Anchor {
 }
 ```
 
-### `anchor`
+### Lower case `anchor`
 Lower case `anchor` is a function that will create a new `Anchor` and call
 `.add()`.
 
