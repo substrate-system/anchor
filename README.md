@@ -42,7 +42,7 @@ npm i -S @substrate-system/anchor
 
 ## Example
 
-See the example page: []()
+See the example page: [substrate-system.github.io/anchor/](https://substrate-system.github.io/anchor/)
 
 ```js
 // import a function
