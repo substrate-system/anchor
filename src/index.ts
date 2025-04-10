@@ -232,10 +232,6 @@ export class Anchor {
                 anchor.style.opacity = '1'
             }
 
-            console.log('aaaaaaaaa')
-            console.log('this.opts.visible', this.opts.visible)
-            console.log('this.isTouchDevice', this.isTouchDevice())
-
             if (this.opts.visible === 'touch' && this.isTouchDevice()) {
                 anchor.style.opacity = '1'
             }
