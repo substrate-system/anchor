@@ -5,7 +5,7 @@
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
 [![Common Changelog](https://nichoth.github.io/badge/common-changelog.svg)](./CHANGELOG.md)
 [![install size](https://flat.badgen.net/packagephobia/install/@substrate-system/anchor?cache-control=no-cache)](https://packagephobia.com/result?p=@substrate-system/anchor)
-[![GZip size](https://flat.badgen.net/bundlephobia/minzip/@substrate-system/anchor)](https://bundlephobia.com/package/@substrate-system/anchor)
+[![GZip size](https://img.badgesize.io/https%3A%2F%2Fesm.sh%2F%40substrate-system%2Fanchor%2Fes2022%2Fanchor.mjs%3Fstyle%3Dflat%26compression%3Dgzip?compression=gzip&style=flat-square)](https://esm.sh/@substrate-system/anchor/es2022/anchor.mjs)
 [![dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg?style=flat-square)](package.json)
 [![license](https://img.shields.io/badge/license-Polyform_Small_Business-249fbc?style=flat-square)](LICENSE)
 
