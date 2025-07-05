@@ -53,12 +53,17 @@ import { anchor } from '@substrate-system/anchor'
 import { Anchor } from '@substrate-system/anchor'
 
 // Use defaults for everything.
+//   { visible: 'always', placement: 'right }
 // This will target any h2, h3, h4, or h5 tags
 anchor()
 
+// always show anchor links on touch devices
+anchor({ visible: 'touch' })
+
 // Or use the class.
 // Must call a.add after creating an instance
-const a = new Anchor()
+const a = new Anchor({ visible: 'touch' })
+a.add()
 ```
 
 ## Modules
