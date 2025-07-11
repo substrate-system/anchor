@@ -77,7 +77,7 @@ import { Anchor } from '@substrate-system/anchor'
 
 ### Common JS
 ```js
-const Anchor = require('@substrate-system/anchor/module')
+const Anchor = require('@substrate-system/anchor')
 ```
 
 ### pre-built JS
@@ -114,6 +114,8 @@ type AnchorOpts = {
 
 ### Upper case `Anchor`
 
+This is the class.
+
 ```js
 class Anchor {
     constructor (opts:Partial<AnchorOpts> = {
@@ -129,7 +131,7 @@ Lower case `anchor` is a function that will create a new `Anchor` and call
 
 >
 > [!NOTE]  
-> Call this with `{ visible: 'touch' }` to create anchor links that are
+> The option `{ visible: 'touch' }` -- create links that are
 > always visible on touch devices.
 >
 
