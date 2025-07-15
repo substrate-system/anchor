@@ -2,7 +2,7 @@
   "name": "@substrate-system/anchor",
   "description": "Automatic anchor links for headings in HTML",
   "type": "module",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "dist/index.js",
   "directories": {
     "example": "example",
