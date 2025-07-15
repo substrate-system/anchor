@@ -15,7 +15,13 @@ export type AnchorOpts = {
 
 export function anchor (opts:Partial<AnchorOpts> = {}):Anchor {
     const a = new Anchor(opts)
-    a.add()
+    if (document.readyState !== 'loading') {
+        a.add()
+    } else {
+        document.addEventListener('DOMContentLoaded', () => {
+            a.add()
+        }, { once: true })
+    }
 
     return a
 }
