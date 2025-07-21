@@ -13,13 +13,16 @@ export type AnchorOpts = {
     titleText:string;  // any text
 }
 
-export function anchor (opts:Partial<AnchorOpts> = {}):Anchor {
+export function anchor (
+    opts:Partial<AnchorOpts> = {},
+    selector?:string|Array<Node>|NodeList
+):Anchor {
     const a = new Anchor(opts)
     if (document.readyState !== 'loading') {
-        a.add()
+        a.add(selector)
     } else {
         document.addEventListener('DOMContentLoaded', () => {
-            a.add()
+            a.add(selector)
         }, { once: true })
     }
 
@@ -136,7 +139,7 @@ export class Anchor {
     /**
      * Add anchor links to page elements.
      *
-     * @param  {String|Array|Nodelist} selector - A CSS selector for targeting
+     * @param  {string|Array<Node>|NodeList} [selector] - A CSS selector for targeting
      * the elements you wish to add anchor links to. Also accepts an array or
      * nodeList containing the relavant elements.
      * @return {this}
