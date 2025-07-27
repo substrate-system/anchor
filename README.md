@@ -43,27 +43,38 @@ npm i -S @substrate-system/anchor
 
 ## Example
 
-See the example page: [substrate-system.github.io/anchor/](https://substrate-system.github.io/anchor/)
+See the example page:
+[substrate-system.github.io/anchor/](https://substrate-system.github.io/anchor/)
 
 ```js
 // import a function
 import { anchor } from '@substrate-system/anchor'
 
-// import the class
-import { Anchor } from '@substrate-system/anchor'
-
-// Use defaults for everything.
-//   { visible: 'always', placement: 'right }
-// This will target any h2, h3, h4, or h5 tags
-anchor()
-
 // always show anchor links on touch devices
 anchor({ visible: 'touch' })
+```
 
-// Or use the class.
-// Must call a.add after creating an instance
-const a = new Anchor({ visible: 'touch' })
-a.add()
+### API
+
+Can pass in options and a selector to use to target elements.
+
+```ts
+function anchor (
+    opts:Partial<AnchorOpts> = {},
+    selector?:string|Array<Node>|NodeList
+):Anchor
+```
+
+### Pass in a query selector
+
+Target all `h` tags, like normal, but not with class `no-anchor`.
+
+```js
+import { anchor } from '@substrate-system/anchor'
+
+anchor(
+  { visible: 'touch' },
+  'h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)')
 ```
 
 ## Modules
