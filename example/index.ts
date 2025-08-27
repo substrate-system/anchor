@@ -6,7 +6,7 @@ import { anchor } from '../src/index.js'
 // create anchors on the HTML elements
 const a = anchor({ visible: 'touch' })
 
-const Example:FunctionComponent<unknown> = function () {
+const Example:FunctionComponent = function () {
     useEffect(() => {
         // wait until we have rendered
         a.add()

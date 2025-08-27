@@ -2,10 +2,14 @@ import { test } from '@substrate-system/tapzero'
 import { anchor, Anchor } from '../src/index.js'
 
 test('Anchor', async t => {
+    document.body.innerHTML += `
+        <h2>The h2 tag</h2>
+        <h1>The h1 tag</h1>
+    `
     const anchor = new Anchor({
         visible: 'touch'
     })
-    t.ok(anchor, 'should be an example')
+    t.ok(anchor, 'Can create a new anchor instance')
 })
 
 test('anchor function', async t => {
